@@ -1,0 +1,8 @@
+--type-set=haml=.haml
+--type-set=sass=.sass
+--ignore-dir=.bundle
+--ignore-dir=vendor
+--ignore-dir=public
+--ignore-dir=public/flash
+--ignore-dir=.git
+--ignore-dir=tmp
