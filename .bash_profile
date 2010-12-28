@@ -7,6 +7,7 @@ export EDITOR=vim
 export PATH="/usr/local/Cellar/node/0.2.5/bin:/usr/local/bin:$PATH"
 export PGDATA="/usr/local/pgsql/data"
 
+alias sc='./script/console'
 alias gits='git status -sb'
 alias conflicts='git ls-files --unmerged | cut -f2 | uniq'
 alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
