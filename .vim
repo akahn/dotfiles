@@ -1,1 +1,1 @@
-/Users/akahn/.vim
+/Users/akahn/.vim/
