@@ -6,7 +6,7 @@ desc 'Installs dotfiles from this distribution for the first time'
 task :setup do
 
   files = Dir.glob('*', File::FNM_DOTMATCH)
-  files = files - ['.', '..', 'Rakefile', '.Rakefile.swp']
+  files = files - ['.', '..', '.git', 'Rakefile']
 
   puts "Linking the following files:"
   files.map do |file|
