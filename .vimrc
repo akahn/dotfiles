@@ -58,6 +58,8 @@ noremap <Leader>t :tag
 noremap Y y$"
 " Move the rest of this line to a new line above the current one
 noremap gJ C<Esc>O"<Esc>^
+" Command-S should only write file if it has been modified
+map <D-s> :update<Esc>
 
 " Don't allow accidental `:Git commit` to spawn vim
 autocmd GUIEnter * let $GIT_EDITOR = 'false'
