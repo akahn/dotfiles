@@ -9,6 +9,7 @@ export PGDATA="/usr/local/pgsql/data"
 
 alias sc='./script/console'
 alias gits='git status -sb'
+alias gc='git commit -v'
 alias conflicts='git ls-files --unmerged | cut -f2 | uniq'
 alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
 alias bootbox='./script/boot'
