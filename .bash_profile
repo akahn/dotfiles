@@ -26,6 +26,6 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-export PS1='\[\e[0;32m\]\w\[\033[0m\]$(parse_git_branch)\$ '
+export PS1='\[\e[0;32m\]\w\[\033[0m\]$(parse_git_branch) ⚒ '
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
