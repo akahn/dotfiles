@@ -7,14 +7,21 @@ export EDITOR=vim
 export PATH="/usr/local/Cellar/node/0.2.5/bin:/usr/local/bin:$PATH"
 export PGDATA="/usr/local/pgsql/data"
 
-alias sc='./script/console'
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
+# Git aliases
 alias gits='git status -sb'
 alias gc='git commit -v'
+alias gap='git add --patch'
 alias conflicts='git ls-files --unmerged | cut -f2 | uniq'
-alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
+
+# Rails aliases
+alias sc='./script/console'
 alias bootbox='./script/boot'
+
+# OS X aliases
+alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
 alias itunes='open -a iTunes'
-source /usr/local/etc/bash_completion.d/git-completion.bash
 
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
