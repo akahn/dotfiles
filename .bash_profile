@@ -23,6 +23,10 @@ alias bootbox='./script/boot'
 alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
 alias itunes='open -a iTunes'
 
+function psgrep {
+  ps aux | grep $1 | grep -v grep
+}
+
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
