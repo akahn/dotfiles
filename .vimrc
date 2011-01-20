@@ -32,6 +32,7 @@ set list
 set listchars=trail:·,tab:›\ 
 set scrolloff=10
 set autoread
+au BufRead,BufNewFile *.sass,*.haml set cursorcolumn
 
 """"""""""""""""
 """ MAPPINGS
