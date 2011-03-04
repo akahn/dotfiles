@@ -1,0 +1,42 @@
+[user]
+	name = Alexander Kahn
+	email = alexanderkahn@gmail.com
+[core]
+	excludesfile = /Users/akahn/.gitignore
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[merge]
+  log = true
+[push]
+  default=current
+[github]
+	user = akahn
+
+# From Tim Pope
+# http://tbaggery.com/2010/10/24/reduce-your-rails-schema-conflicts.html
+[merge "railsschema"]
+  name = newer Rails schema version
+  driver = "ruby -e '\n\
+    system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
+    b = File.read(%(%A))\n\
+    b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
+      %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
+    end\n\
+    File.open(%(%A), %(w)) {|f| f.write(b)}\n\
+    exit 1 if b.include?(%(<)*%L)'"
+
+[rerere]
+	enabled = 1
