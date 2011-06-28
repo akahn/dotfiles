@@ -6,13 +6,21 @@ syntax on
 """ SETTINGS
 """"""""""""""""
 let mapleader=","
-color jellybeans
+color solarized
+set bg=dark
 set guifont=Bitstream\ Vera\ Sans\ Mono:h14
 set guioptions-=T " Hide toolbar on launch
+
 if has("persistent_undo")
   set undofile
   set undodir=~/.undo
 endif
+
+if has("gui_macvim")
+  " full screen macvim
+  set fuopt=maxvert,maxhorz
+endif
+
 set number
 set incsearch
 set expandtab
@@ -30,9 +38,12 @@ set laststatus=2
 " Show trailing whitespace
 set list
 set listchars=trail:·,tab:›\ 
-set scrolloff=10
+set scrolloff=5
 set autoread
+set wildmenu
 au BufRead,BufNewFile *.sass,*.haml set cursorcolumn
+au BufRead,BufNewFile *.json set ft=javascript
+au BufRead,BufNewFile *.md set ft=markdown
 
 """"""""""""""""
 """ MAPPINGS
@@ -61,6 +72,7 @@ noremap Y y$"
 noremap gJ C<Esc>O"<Esc>^
 " Command-S should only write file if it has been modified
 map <D-s> :update<Esc>
+noremap <Leader>g :Gbrowse!<Esc>
 
 " Don't allow accidental `:Git commit` to spawn vim
 autocmd GUIEnter * let $GIT_EDITOR = 'false'

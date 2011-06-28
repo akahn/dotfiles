@@ -24,6 +24,10 @@
   default=current
 [github]
 	user = akahn
+	token = 36fd99e14638575b6d8726fc3b2bc2d9
+
+[alias]
+  me = log --author=Alexander
 
 # From Tim Pope
 # http://tbaggery.com/2010/10/24/reduce-your-rails-schema-conflicts.html

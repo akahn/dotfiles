@@ -18,6 +18,7 @@ alias conflicts='git ls-files --unmerged | cut -f2 | uniq'
 # Rails aliases
 alias sc='./script/console'
 alias bootbox='./script/boot'
+alias b='bundle exec'
 
 # OS X aliases
 alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
