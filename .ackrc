@@ -6,3 +6,4 @@
 --ignore-dir=public/flash
 --ignore-dir=.git
 --ignore-dir=tmp
+--ignore-dir=doc
