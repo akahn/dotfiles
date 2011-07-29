@@ -41,6 +41,7 @@ set listchars=trail:·,tab:›\
 set scrolloff=5
 set autoread
 set wildmenu
+set gdefault
 au BufRead,BufNewFile *.sass,*.haml set cursorcolumn
 au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.md set ft=markdown
@@ -73,6 +74,12 @@ noremap gJ C<Esc>O"<Esc>^
 " Command-S should only write file if it has been modified
 map <D-s> :update<Esc>
 noremap <Leader>g :Gbrowse!<Esc>
+" Select last pasted text
+nnoremap gp `[v`]
+" Open Gundo window
+nnoremap <Leader>u :GundoToggle<CR>
+
+
 
 " Don't allow accidental `:Git commit` to spawn vim
 autocmd GUIEnter * let $GIT_EDITOR = 'false'
