@@ -1,0 +1,12 @@
+Bufmru_Read_Nummarks()	bufmru.txt	/*Bufmru_Read_Nummarks()*
+bufmru	bufmru.txt	/*bufmru*
+bufmru-install	bufmru.txt	/*bufmru-install*
+bufmru-usage	bufmru.txt	/*bufmru-usage*
+bufmru.txt	bufmru.txt	/*bufmru.txt*
+bufmru.vim	bufmru.txt	/*bufmru.vim*
+g:bufmru_bnrs	bufmru.txt	/*g:bufmru_bnrs*
+g:bufmru_confclose	bufmru.txt	/*g:bufmru_confclose*
+g:bufmru_limit	bufmru.txt	/*g:bufmru_limit*
+g:bufmru_read_nummarks	bufmru.txt	/*g:bufmru_read_nummarks*
+g:bufmru_switchkey	bufmru.txt	/*g:bufmru_switchkey*
+g:bufmru_wildmenu	bufmru.txt	/*g:bufmru_wildmenu*
