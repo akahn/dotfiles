@@ -34,3 +34,8 @@ if ENV['RAILS_ENV']
   end
 end
 
+def open(w)
+  `open "#{w}"`
+  w
+end
+
