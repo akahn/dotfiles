@@ -42,6 +42,7 @@ set scrolloff=5
 set autoread
 set wildmenu
 set gdefault
+set wcm=<C-Z>
 au BufRead,BufNewFile *.sass,*.haml set cursorcolumn
 au BufRead,BufNewFile *.json set ft=javascript
 au BufRead,BufNewFile *.md set ft=markdown
@@ -59,6 +60,8 @@ noremap <C-j> <C-w><C-j>
 noremap <C-k> <C-w><C-k>
 " Alternate buffers
 noremap gb <C-^>
+" Edit a file in the current directory
+noremap <Leader>e :e %:h<C-Z>
 " Close quickfix window
 noremap <Leader>cc :cclose<Enter>
 " Shortcut for :cnext
