@@ -1,6 +1,8 @@
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
 
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
 export PAGER=vimpager
 export GIT_PAGER=less
 export RUBYOPT=rubygems
