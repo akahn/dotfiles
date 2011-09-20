@@ -82,7 +82,18 @@ nnoremap gp `[v`]
 " Open Gundo window
 nnoremap <Leader>u :GundoToggle<CR>
 
-
+" Remap the tab key to do autocompletion or indentation depending on the
+" context (from http://vim.wikia.com/wiki/Smart_mapping_for_tab_completion)
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
 
 " Don't allow accidental `:Git commit` to spawn vim
 autocmd GUIEnter * let $GIT_EDITOR = 'false'
