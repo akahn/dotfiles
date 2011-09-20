@@ -26,6 +26,10 @@ alias b='bundle exec'
 alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
 alias itunes='open -a iTunes'
 
+alias rtest="ruby -I test"
+
+gemcd() { cd "$(gem open -e echo $1)" }
+
 function psgrep {
   ps aux | grep $1 | grep -v grep
 }
