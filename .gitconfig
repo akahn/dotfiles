@@ -44,3 +44,5 @@
 
 [rerere]
 	enabled = 1
+[web]
+	browser = open
