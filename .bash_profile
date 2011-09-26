@@ -1,6 +1,8 @@
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
 
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
 export PAGER=vimpager
 export GIT_PAGER=less
 export RUBYOPT=rubygems
@@ -23,6 +25,10 @@ alias b='bundle exec'
 # OS X aliases
 alias pbindent='pbpaste | sed "s/^/    /" | pbcopy'
 alias itunes='open -a iTunes'
+
+alias rtest="ruby -I test"
+
+gemcd() { cd "$(gem open -e echo $1)" }
 
 function psgrep {
   ps aux | grep $1 | grep -v grep
