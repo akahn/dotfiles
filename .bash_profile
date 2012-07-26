@@ -19,7 +19,7 @@ export NODE_PATH='/usr/local/lib/node'
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1]/"
 }
-export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] $(parse_git_branch) \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]\033[0m'
+#export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] $(parse_git_branch) \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]\033[0m'
 
 # Git aliases
 alias gits='git status -sb'
