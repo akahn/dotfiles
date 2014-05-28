@@ -1,3 +1,4 @@
 .irssi/away.log
 .DS_Store
 *.swp
+.vim/.netrwhist

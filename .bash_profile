@@ -26,6 +26,7 @@ alias gits='git status -sb'
 alias gc='git commit -v'
 alias gap='git add --patch'
 alias conflicts='git ls-files --unmerged | cut -f2 | uniq'
+alias flounce='git checkout --theirs . && git add . && gc'
 
 # Rails aliases
 alias sc='./script/console'
@@ -38,6 +39,8 @@ alias itunes='open -a iTunes'
 
 alias rtest="ruby -I test"
 
+alias jsontool='python -m json.tool'
+
 function gemcd() {
   cd "$(gem open -e echo $1)"
 }
@@ -46,12 +49,15 @@ function psgrep {
   ps aux | grep $1 | grep -v grep
 }
 
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+[[ -s /Users/akahn/.autojump/etc/profile.d/autojump.sh ]] && source /Users/akahn/.autojump/etc/profile.d/autojump.sh
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
+
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

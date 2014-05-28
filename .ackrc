@@ -7,3 +7,4 @@
 --ignore-dir=.git
 --ignore-dir=tmp
 --ignore-dir=doc
+--ignore-dir=coverage

@@ -7,7 +7,7 @@ syntax on
 """"""""""""""""
 let mapleader=","
 color solarized
-set bg=dark
+set bg=light
 set guifont=Bitstream\ Vera\ Sans\ Mono:h14
 set guioptions-=T " Hide toolbar on launch
 
