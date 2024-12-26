@@ -7,6 +7,7 @@ syntax on
 """"""""""""""""
 let mapleader=","
 color solarized
+set backspace=2 " make backspace work like most other apps
 set bg=light
 set guifont=Bitstream\ Vera\ Sans\ Mono:h14
 set guioptions-=T " Hide toolbar on launch
@@ -19,6 +20,7 @@ endif
 if has("gui_macvim")
   " full screen macvim
   set fuopt=maxvert,maxhorz
+  source ~/.gvimrc
 endif
 
 set number
@@ -41,6 +43,7 @@ set listchars=trail:·,tab:›\
 set scrolloff=5
 set autoread
 set wildmenu
+set wildignore=vendor/cache,Godeps
 set gdefault
 set wcm=<C-Z>
 au BufRead,BufNewFile *.sass,*.haml set cursorcolumn
@@ -97,3 +100,7 @@ inoremap <s-tab> <c-n>
 
 " Don't allow accidental `:Git commit` to spawn vim
 autocmd GUIEnter * let $GIT_EDITOR = 'false'
+
+" Space bar toggles folds.  This is life changing. [3]
+" nnoremap <Space> za
+" vnoremap <Space> za

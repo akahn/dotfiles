@@ -1,2 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/akahn/.bundle/cache'
+let g:netrw_dirhist_4='/Users/akahn/Dropbox/Netlify'
+let g:netrw_dirhist_3='/Users/akahn/.config'
+let g:netrw_dirhist_2='/Users/akahn/netlify/docs/docs'
+let g:netrw_dirhist_1='/Users/akahn/netlify/docs'
+let g:netrw_dirhist_0='/Users/akahn/netlify/local-dev'
+let g:netrw_dirhist_9='/Users/alex.kahn/Librato/appoptics-forwarder/.circleci'
+let g:netrw_dirhist_8='/Users/alex.kahn/Librato/papertrail-app-environs-solarwindscloud/esw-c01-swriter/stagevpc'
+let g:netrw_dirhist_7='/Users/alex.kahn/Librato/papertrail-app-environs-solarwindscloud/esw-c01-swriter'
+let g:netrw_dirhist_6='/Users/alex.kahn/Librato/papertrail-app-environs-solarwindscloud'

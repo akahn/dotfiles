@@ -8,6 +8,8 @@ Wirble.colorize
 
 require 'pp'
 IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "/Users/akahn/.irb-save-history"
 
 module RailsLogging
   def log_to_console

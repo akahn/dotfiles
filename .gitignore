@@ -1,4 +1,13 @@
 .irssi/away.log
 .DS_Store
-*.swp
+*.DS_Store
+*.sw*
 .vim/.netrwhist
+.idea/*
+*.iml
+*/.idea
+.idea/
+.idea
+
+# Local Netlify folder
+.netlify

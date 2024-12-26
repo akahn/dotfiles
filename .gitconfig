@@ -1,48 +1,45 @@
 [user]
-	name = Alexander Kahn
-	email = alexanderkahn@gmail.com
+	name = Alex Kahn
+	email = alex.kahn@netlify.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCl4xVFwPXkCsGdWKwYMz1To0O4pSEifva5i56eeV02SYYdMmCTH2wTzV1R8EzKDis0iT7Cv/IUv8/9emChYXZORhODZcBQQfurHl8aj0ACmH/NQtWtGRjtrGpMAqzUzH2uUOmA5VR6IWbTnM30d00DgUd+Q6WN2X+lCeLObG1+yuRwwsbsckYivZh7CdaPVAHdWLrDn1x7lZQrnPrnLAVbWs74vdZh/DSkZHvORJiBown0I/lea9nNnVGMdukKxaqXyhPrcMe7dgu5E9DVoFHPFv70Ut9Z0grrU60xJr/N52ND+yD48NMWv8kAgptuqsYw1LAzLQYB4JJMlNnyBVQzCYcSE7XtncTJzuDCn1UkM3U0aP6tPJps820f9bxQDwyIt9Jnlyr8fHZuPL/FckyezeneJoddIifH6maV2apQMXCL9Txoljx6hTJ6xxgMUYiHIPlQmG9Z3c6So5yzV5gFeNpdU6YH9fP8ey0baHi0ohEorODKcZgm6HTeoNqN/Y8=
 [core]
 	excludesfile = /Users/akahn/.gitignore
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 [merge]
-  log = true
+	log = true
 [push]
-  default=current
+	default=current
 [github]
 	user = akahn
-	token = 36fd99e14638575b6d8726fc3b2bc2d9
-
+	token = 9c38bca2a2b071073fc160adfb1a87f841f3de16
+[pull]
+	rebase = false
 [alias]
-  me = log --author=Alexander
-
-# From Tim Pope
-# http://tbaggery.com/2010/10/24/reduce-your-rails-schema-conflicts.html
-[merge "railsschema"]
-  name = newer Rails schema version
-  driver = "ruby -e '\n\
-    system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
-    b = File.read(%(%A))\n\
-    b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
-      %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
-    end\n\
-    File.open(%(%A), %(w)) {|f| f.write(b)}\n\
-    exit 1 if b.include?(%(<)*%L)'"
-
-[rerere]
-	enabled = 1
-[web]
-	browser = open
+	br = branch --sort=-committerdate
+	co = checkout
+	sha = !"git rev-parse HEAD | tee /dev/tty | tr -d '\n' | pbcopy"
+  last = !"git show HEAD --pretty="%H" --no-patch"
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

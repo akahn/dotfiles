@@ -1,10 +1,13 @@
 --type-set=haml=.haml
 --type-set=sass=.sass
+--ignore-dir=.idea
 --ignore-dir=.bundle
 --ignore-dir=vendor
 --ignore-dir=public
 --ignore-dir=public/flash
+--ignore-dir=log
 --ignore-dir=.git
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
+--ignore-dir=Godeps

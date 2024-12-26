@@ -1,11 +1,10 @@
 ---
 :backtrace: false
-:benchmark: false
 :bulk_threshold: 1000
 :sources:
 - http://rubygems.org/
-- http://gems.paperlesspost.com
-- http://gems.paperlesspost.net/
+- https://094cc21bb71acbcf1d2366b99d8be09b7da008e3de9a0dd0:@packagecloud.io/AppOptics/apm-instrumentation/
 :update_sources: true
 :verbose: true
-gem: --no-rdoc --no-ri
+benchmark: false
+gem: "--no-rdoc --no-ri"
